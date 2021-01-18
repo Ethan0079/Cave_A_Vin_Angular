@@ -1,15 +1,13 @@
 import { Component, NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { LoginComponent } from './login/Components/login.component';
+import { LoginComponent } from './Components/login.component';
+import { IsLoggedGuard } from '../guard/is-logged.guard';
 
 const routes: Routes = [
-  // {
-  //   path: '**',
-  //   redirectTo: '/login'
-  // },
   {
     path: 'login',
-    component: LoginComponent
+    component: LoginComponent //,
+    //canActivate: [IsLoggedGuard]
   }
 ];
 
@@ -17,5 +15,4 @@ const routes: Routes = [
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]
 })
-export class AppRoutingModule { }
-
+export class LoginRoutingModule { }
