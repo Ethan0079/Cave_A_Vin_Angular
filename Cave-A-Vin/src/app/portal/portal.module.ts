@@ -5,13 +5,19 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {FormsModule} from '@angular/forms';
 import {BrowserModule} from '@angular/platform-browser';
 import { BannerComponent } from './Components/banner/banner.component';
+import { PanelComponent } from './Components/panel/panel.component';
+import { MainComponent } from './Components/main/main.component';
+import { MainContentComponent } from './Components/main-content/main-content.component';
 
 
 
 @NgModule({
   declarations: [
     PortalComponent,
-    BannerComponent
+    BannerComponent,
+    PanelComponent,
+    MainComponent,
+    MainContentComponent
   ],
   imports: [
     BrowserModule,

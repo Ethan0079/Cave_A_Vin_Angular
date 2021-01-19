@@ -16,7 +16,7 @@ export class ServiceAuthentificationService {
     {
       this.isLogged = true;
     } else {
-      console.log('pwd ou username faux');
+      console.log('Crendentials non valide ...');
       this.isLogged = false;
     }
     localStorage.setItem('isLogged', String(this.isLogged));
