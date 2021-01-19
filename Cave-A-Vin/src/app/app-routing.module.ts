@@ -1,5 +1,7 @@
 import { Component, NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
+import { IsLoggedGuard } from './guard/is-logged.guard';
+import { LoggedGuardGuard } from './guard/logged-guard.guard';
 import { LoginComponent } from './login/Components/login.component';
 import { NotFoundComponent } from './not-found/not-found.component';
 import { PortalComponent } from './portal/Components/portal.component';
@@ -7,7 +9,8 @@ import { PortalComponent } from './portal/Components/portal.component';
 const routes: Routes = [
   {
     path: 'login',
-    component: LoginComponent
+    component: LoginComponent,
+    canActivate: [IsLoggedGuard]
   },
   {
     path: 'not-found',
@@ -15,7 +18,8 @@ const routes: Routes = [
   },
   {
     path: 'portal',
-    component: PortalComponent
+    component: PortalComponent,
+    canActivate: [LoggedGuardGuard]
   },
   {
     path: 'portal',

@@ -1,0 +1,18 @@
+.jumbotron {
+    background-image: 
+     url('../../../../assets/img/home-banner.jpg');
+    background-size: cover;
+    min-height: 130px;
+   }
+   .card {
+       position: relative;
+       display: flex;
+       flex-direction: column;
+       min-width: 0;
+       word-wrap: break-word;
+       background-color: rgba(200, 10, 10, 0.8);
+       background-clip: border-box;
+       border: 1px solid rgba(0,0,0,.125);
+       border-radius: .25rem;
+       opacity: 1;
+   }
