@@ -26,7 +26,7 @@ export class ServiceAuthentificationService {
   public disconect(): void{
     this.isLogged = false;
     localStorage.setItem('isLogged', String(this.isLogged));
-
+    window.location.reload();
   }
 }
 

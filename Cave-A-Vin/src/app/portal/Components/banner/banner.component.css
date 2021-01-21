@@ -1,4 +1,4 @@
-.jumbotron {
+/* .jumbotron {
     background-image: 
      url('../../../../assets/img/home-banner.jpg');
     background-size: cover;
@@ -15,4 +15,7 @@
        border: 1px solid rgba(0,0,0,.125);
        border-radius: .25rem;
        opacity: 1;
-   }
+   } */
+.navbar-dark .navbar-nav .nav-link {
+    color: white ;
+}

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ServiceAuthentificationService } from 'src/app/login/Services/service-authentification.service';
+import { IAuthentification } from 'src/app/iauthentification';
 
 @Component({
   selector: 'app-panel',
@@ -8,9 +9,13 @@ import { ServiceAuthentificationService } from 'src/app/login/Services/service-a
 })
 export class PanelComponent implements OnInit {
 
+  // login: IAuthentification;
+
   constructor(private service: ServiceAuthentificationService) { }
 
-  ngOnInit(): void {
+  ngOnInit(): void
+  {
+    // this.login = this.service.login;
   }
 
   disconect(): void{

@@ -8,6 +8,7 @@ import { BannerComponent } from './Components/banner/banner.component';
 import { PanelComponent } from './Components/panel/panel.component';
 import { MainComponent } from './Components/main/main.component';
 import { MainContentComponent } from './Components/main-content/main-content.component';
+import { HomePageComponent } from './Components/home-page/home-page.component';
 
 
 
@@ -17,7 +18,8 @@ import { MainContentComponent } from './Components/main-content/main-content.com
     BannerComponent,
     PanelComponent,
     MainComponent,
-    MainContentComponent
+    MainContentComponent,
+    HomePageComponent
   ],
   imports: [
     BrowserModule,
