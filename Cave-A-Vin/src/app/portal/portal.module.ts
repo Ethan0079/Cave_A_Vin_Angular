@@ -9,6 +9,8 @@ import { PanelComponent } from './Components/panel/panel.component';
 import { MainComponent } from './Components/main/main.component';
 import { MainContentComponent } from './Components/main-content/main-content.component';
 import { HomePageComponent } from './Components/home-page/home-page.component';
+import { BottleComponent } from './Components/bottle/bottle.component';
+import { CardBottleComponent } from './Components/card-bottle/card-bottle.component';
 
 
 
@@ -19,7 +21,9 @@ import { HomePageComponent } from './Components/home-page/home-page.component';
     PanelComponent,
     MainComponent,
     MainContentComponent,
-    HomePageComponent
+    HomePageComponent,
+    BottleComponent,
+    CardBottleComponent
   ],
   imports: [
     BrowserModule,

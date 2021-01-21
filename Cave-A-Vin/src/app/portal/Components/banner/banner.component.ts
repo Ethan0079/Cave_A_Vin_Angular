@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { ServiceAuthentificationService } from 'src/app/login/Services/service-authentification.service';
 
 @Component({
@@ -8,7 +9,7 @@ import { ServiceAuthentificationService } from 'src/app/login/Services/service-a
 })
 export class BannerComponent implements OnInit {
 
-  constructor(private service: ServiceAuthentificationService) { }
+  constructor(private service: ServiceAuthentificationService, private router: Router) { }
 
   ngOnInit(): void
   {
@@ -16,7 +17,8 @@ export class BannerComponent implements OnInit {
   }
 
   disconect(): void{
-    this.service.disconect();
+    this.service.disconnect();
+    this.router.navigate(["login"]);
   }
 
 }

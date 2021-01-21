@@ -9,11 +9,6 @@ const routes: Routes = [
     path: 'login',
     component: LoginComponent,
     canActivate: [IsLoggedGuard]
-  },
-  {
-    path: 'portal',
-    component: PortalComponent,
-    canActivate: [IsLoggedGuard]
   }
 ];
 

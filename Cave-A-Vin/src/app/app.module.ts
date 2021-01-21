@@ -7,6 +7,8 @@ import { LoginModule } from './login/login.module';
 import { PortalModule } from './portal/portal.module';
 import { NotFoundComponent } from './not-found/not-found.component';
 
+import { HttpClientModule } from'@angular/common/http';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -14,10 +16,11 @@ import { NotFoundComponent } from './not-found/not-found.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule,
     LoginModule,
     BrowserModule,
-    PortalModule
+    PortalModule,
+    AppRoutingModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

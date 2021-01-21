@@ -2,9 +2,10 @@ import { Component, NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { PortalComponent } from './Components/portal.component';
 import { LoggedGuardGuard } from '../guard/logged-guard.guard';
-import { LoginComponent } from '../login/Components/login.component';
 import { PanelComponent } from './Components/panel/panel.component';
 import { MainComponent } from './Components/main/main.component';
+import { BottleComponent } from './Components/bottle/bottle.component';
+import { HomePageComponent } from './Components/home-page/home-page.component';
 
 const routes: Routes = [
   {
@@ -12,15 +13,11 @@ const routes: Routes = [
     component: PortalComponent,
     canActivate: [LoggedGuardGuard],
     children: [
-       { path: '', component: PanelComponent },
-       { path: '', component: MainComponent}
+      { path: '', component: HomePageComponent },
+       { path: 'bottles', component: BottleComponent}
      ]
-  },
-  {
-    path: 'login',
-    component: LoginComponent,
-    canActivate: [LoggedGuardGuard] 
   }
+  
 ];
 
 @NgModule({

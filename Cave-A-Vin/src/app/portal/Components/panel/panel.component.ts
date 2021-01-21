@@ -18,7 +18,7 @@ export class PanelComponent implements OnInit {
     // this.login = this.service.login;
   }
 
-  disconect(): void{
-    this.service.disconect();
+  disconnect(): void{
+    this.service.disconnect();
   }
 }
