@@ -13,7 +13,7 @@
                 Ajouter
               </button>
               <button class="btn btn-outline-warning" style="margin-right:auto; margin-left: 10px;"data-toggle="modal" data-target="#updateBottle">
-                Update
+                Modification
               </button>
             </div>
             <!-- Modal Ajout-->
@@ -33,7 +33,7 @@
                       <input type="number" class="form-control" id="recipient-name" [(ngModel)]="bottle.Id" />
                     </div> -->
                     <div class="form-group">
-                      <label for="message-text" class="col-form-label">Name :</label>
+                      <label for="message-text" class="col-form-label">Nom :</label>
                       <input type="text" class="form-control" id="message-text" [(ngModel)]="bottle.Name" />
                     </div>
                     <div class="form-group">
@@ -41,15 +41,15 @@
                       <input type="datetime" class="form-control" id="message-text" [(ngModel)]="bottle.Date" />
                     </div>
                     <div class="form-group">
-                      <label for="message-text" class="col-form-label">Amount :</label>
+                      <label for="message-text" class="col-form-label">Quantité :</label>
                       <input type="number" class="form-control" id="message-text" [(ngModel)]="bottle.Amount" />
                     </div>
                     <div class="form-group">
-                      <label for="message-text" class="col-form-label">Price per bottle :</label>
+                      <label for="message-text" class="col-form-label">Prix par bouteille :</label>
                       <input type="number" class="form-control" id="message-text" [(ngModel)]="bottle.PricePerBottle" />
                     </div>
                     <div class="form-group">
-                      <label for="message-text" class="col-form-label">Type vin :</label>
+                      <label for="message-text" class="col-form-label">Type de vin :</label>
                       <input type="number" class="form-control" id="message-text" [(ngModel)]="bottle.Typevin" />
                     </div>
                     <!-- <div class="form-group">
@@ -68,10 +68,14 @@
                       <label for="message-text" class="col-form-label">Cave ID :</label>
                       <input type="number" class="form-control" id="message-text" [(ngModel)]="bottle.CaveId" />
                     </div>
+                    <div class="form-group">
+                      <label for="message-text" class="col-form-label">Photo de la bouteille (url):</label>
+                      <input type="text" class="form-control" id="message-text" [(ngModel)]="bottle.ImageUrl" />
+                    </div>
                   </div>
                   <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                    <button type="button" class="btn btn-primary" (click)="postBottle()">Create</button>
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Fermer</button>
+                    <button type="button" class="btn btn-primary" (click)="postBottle()">Créer</button>
                   </div>
                 </div>
               </div>
@@ -93,7 +97,7 @@
                       <input type="number" class="form-control" id="recipient-name" [(ngModel)]="bottleId" />
                     </div>
                     <div class="form-group">
-                      <label for="message-text" class="col-form-label">Name :</label>
+                      <label for="message-text" class="col-form-label">Nom :</label>
                       <input type="text" class="form-control" id="message-text" [(ngModel)]="bottle.Name" />
                     </div>
                     <div class="form-group">
@@ -101,15 +105,15 @@
                       <input type="datetime" class="form-control" id="message-text" [(ngModel)]="bottle.Date" />
                     </div>
                     <div class="form-group">
-                      <label for="message-text" class="col-form-label">Amount :</label>
+                      <label for="message-text" class="col-form-label">Quantité :</label>
                       <input type="number" class="form-control" id="message-text" [(ngModel)]="bottle.Amount" />
                     </div>
                     <div class="form-group">
-                      <label for="message-text" class="col-form-label">Price per bottle :</label>
+                      <label for="message-text" class="col-form-label">Prix par bouteille :</label>
                       <input type="number" class="form-control" id="message-text" [(ngModel)]="bottle.PricePerBottle" />
                     </div>
                     <div class="form-group">
-                      <label for="message-text" class="col-form-label">Type vin :</label>
+                      <label for="message-text" class="col-form-label">Type de vin :</label>
                       <input type="number" class="form-control" id="message-text" [(ngModel)]="bottle.Typevin" />
                     </div>
                     <!-- <div class="form-group">
@@ -129,9 +133,13 @@
                       <input type="number" class="form-control" id="message-text" [(ngModel)]="bottle.CaveId" />
                     </div>
                   </div>
+                  <div class="form-group">
+                    <label for="message-text" class="col-form-label">Photo de la bouteille (url):</label>
+                    <input type="text" class="form-control" id="message-text" [(ngModel)]="bottle.ImageUrl" />
+                  </div>  
                   <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                    <button type="button" class="btn btn-primary" (click)="updateBottle()">Update</button>
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Fermer</button>
+                    <button type="button" class="btn btn-primary" (click)="updateBottle()">Modifier</button>
                   </div>
                 </div>
               </div>

@@ -9,6 +9,7 @@ export interface Bottle {
     OwnerId: number;
     // Cave: number;
     CaveId: number;
+    ImageUrl: String;
 }
 
 export enum TypeVin{

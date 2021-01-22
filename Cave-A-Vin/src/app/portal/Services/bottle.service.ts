@@ -14,13 +14,13 @@ export class BottleService {
   constructor(private http: HttpClient){}
 
   getBottles(): Observable<Array<Bottle>>{
-    debugger;
+    //debugger;
     return this.http.get<Array<Bottle>>(this.urlAllBottle);
   }
 
   getBottle(id: number): Observable<Array<Bottle>>{
+
     return this.http.get<Array<Bottle>>(this.urlAllBottle+"/"+ id);
-    
   }
 
   deleteBottle(id: number): any {

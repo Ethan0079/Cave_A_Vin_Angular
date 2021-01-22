@@ -15,7 +15,7 @@ export class BottleComponent implements OnInit {
   public bottleId: number = 1;
 
   constructor(private http: HttpClient, public _bottleService: BottleService) {
-    this.bottle = { Id: 0, Name: "", Date: "2021-01-14T09:37:43.568", Amount: 0, PricePerBottle: 0, CaveId: 0, OwnerId: 0, Typevin: 0 }
+    this.bottle = { Id: 0, Name: "", Date: "2021-01-14T09:37:43.568", Amount: 0, PricePerBottle: 0, CaveId: 0, OwnerId: 0, Typevin: 0, ImageUrl:"" }
   }
 
   ngOnInit(): void {
