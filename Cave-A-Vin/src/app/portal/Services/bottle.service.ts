@@ -14,6 +14,7 @@ export class BottleService {
   constructor(private http: HttpClient){}
 
   getBottles(): Observable<Array<Bottle>>{
+    debugger;
     return this.http.get<Array<Bottle>>(this.urlAllBottle);
   }
 
@@ -26,6 +27,12 @@ export class BottleService {
     let endPoints = id;
 
     return this.http.delete<Bottle>(this.urlAllBottle +"/"+ endPoints.toString() );
+  }
+
+  postBottle(newBottle: Bottle, bottleId: number): Observable<Bottle> {
+    //let endPoints = newBottle.Id;
+
+    return this.http.post<Bottle>(this.urlAllBottle +"/"+ bottleId, newBottle);
   }
   
   public addPost(newBottle: Bottle): Observable<Bottle> {

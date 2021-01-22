@@ -6,6 +6,7 @@ import { PanelComponent } from './Components/panel/panel.component';
 import { MainComponent } from './Components/main/main.component';
 import { BottleComponent } from './Components/bottle/bottle.component';
 import { HomePageComponent } from './Components/home-page/home-page.component';
+import { AboutComponent } from './Components/about/about.component';
 
 const routes: Routes = [
   {
@@ -14,7 +15,8 @@ const routes: Routes = [
     canActivate: [LoggedGuardGuard],
     children: [
       { path: '', component: HomePageComponent },
-       { path: 'bottles', component: BottleComponent}
+      { path: 'bottles', component: BottleComponent},
+      { path: 'about', component: AboutComponent}
      ]
   }
   

@@ -11,6 +11,7 @@ import { MainContentComponent } from './Components/main-content/main-content.com
 import { HomePageComponent } from './Components/home-page/home-page.component';
 import { BottleComponent } from './Components/bottle/bottle.component';
 import { CardBottleComponent } from './Components/card-bottle/card-bottle.component';
+import { AboutComponent } from './Components/about/about.component';
 
 
 
@@ -23,7 +24,8 @@ import { CardBottleComponent } from './Components/card-bottle/card-bottle.compon
     MainContentComponent,
     HomePageComponent,
     BottleComponent,
-    CardBottleComponent
+    CardBottleComponent,
+    AboutComponent
   ],
   imports: [
     BrowserModule,

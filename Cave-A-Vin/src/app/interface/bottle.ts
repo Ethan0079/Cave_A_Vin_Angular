@@ -4,9 +4,16 @@ export interface Bottle {
     Date: string;
     Amount: number;
     PricePerBottle: number;
-    TypeVin: number;
-    Owner: number;
-    OwnerID: number;
-    Cave: number;
-    CaveID: number;
+    Typevin: TypeVin;
+    // Owner: number;
+    OwnerId: number;
+    // Cave: number;
+    CaveId: number;
+}
+
+export enum TypeVin{
+    Rouge = 1,
+    Blanc = 2,
+    Rose = 3,
+    Champagne = 4
 }

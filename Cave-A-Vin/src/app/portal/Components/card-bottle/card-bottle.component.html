@@ -5,18 +5,18 @@
         <li class="list-group-item">Date : {{bottle.Date}}</li>
         <li class="list-group-item">Amount : {{bottle.Amount}}</li>
         <li class="list-group-item">Price Per Bottle : {{bottle.PricePerBottle}}</li>
-        <li class="list-group-item">TypeVin : {{bottle.TypeVin}}</li>
-        <li class="list-group-item">Owner : {{bottle.Owner}}</li>   
-        <li class="list-group-item">OwnerID : {{bottle.OwnerID}}</li>   
-        <li class="list-group-item">Cave : {{bottle.Cave}}</li>   
-        <li class="list-group-item">CaveID : {{bottle.CaveID}}</li>   
-        <!-- <img [src]="imageByForce()"/>    -->
+        <li class="list-group-item">TypeVin : {{bottle.Typevin}}</li>
+        <!-- <li class="list-group-item">Owner : {{bottle.Owner}}</li>    -->
+        <li class="list-group-item">OwnerID : {{bottle.OwnerId}}</li>   
+        <!-- <li class="list-group-item">Cave : {{bottle.Cave}}</li>    -->
+        <li class="list-group-item">CaveID : {{bottle.CaveId}}</li>   
+        <!-- <img [src]="imageByForce()"/>   -->
         <!-- <img src="https://localhost:5001/bottles/{{bottle.Id}}/avatar"> -->
     </ul>
     <div class="button-space">
-        <button class="btn btn-danger" (click)="onDeleteBottle()">Delete</button>
+        <button class="btn btn-outline-danger" (click)="onDeleteBottle()">Delete</button>
     </div>
-    <div class="button-space">
-        <button class="btn btn-warning">Update</button>
-    </div>
+    <!-- <div class="button-space">
+        <button class="btn btn-warning" (click)="updateBottle()">Update</button>
+    </div> -->
 </div>
