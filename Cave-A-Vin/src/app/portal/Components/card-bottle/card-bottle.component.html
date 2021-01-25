@@ -7,16 +7,25 @@
         <li class="list-group-item">Prix par bouteille : {{bottle.PricePerBottle}}</li>
         <li class="list-group-item">Type de vin : {{bottle.Typevin}}</li>
         <!-- <li class="list-group-item">Owner : {{bottle.Owner}}</li>    -->
-        <li class="list-group-item">OwnerID : {{bottle.OwnerId}}</li>   
+        <li class="list-group-item">OwnerID : {{bottle.OwnerId}}</li>
         <!-- <li class="list-group-item">Cave : {{bottle.Cave}}</li>    -->
-        <li class="list-group-item">CaveID : {{bottle.CaveId}}</li>   
-        <!-- <img [src]="imageByForce()"/>   -->
-        <img class="bottle-img" src="{{bottle.ImageUrl}}">
+        <li class="list-group-item">CaveID : {{bottle.CaveId}}</li>
+
+        <img data-toggle="modal" data-target="#openImage" class="bottle-img" src="{{bottle.ImageUrl}}">
     </ul>
     <div class="button-space">
         <button class="btn btn-outline-danger" (click)="onDeleteBottle()">Supprimer</button>
     </div>
-    <!-- <div class="button-space">
-        <button class="btn btn-warning" (click)="updateBottle()">Update</button>
-    </div> -->
 </div>
+<!-- <div class="modal fade" id="openImage{{bottle.Id}}" style="display: block !important;" [hidden]="!showBigImage" tabindex="-1" aria-labelledby="openImageLabel">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-body">
+                <img class="bottle-img big" src="{{bottle.ImageUrl}}">
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Fermer</button>
+            </div>
+        </div>
+    </div>
+</div> -->

@@ -10,7 +10,8 @@ import { BottleService } from '../../Services/bottle.service';
 })
 export class CardBottleComponent implements OnInit {
   sanitizer: any;
-  
+  showBigImage: boolean = false;
+
   constructor(private http: HttpClient, public _bottleService:BottleService) { }
 
   ngOnInit(): void {
@@ -28,17 +29,11 @@ export class CardBottleComponent implements OnInit {
         }
       )
     );
-    
+
   }
 
-
-  // imageByForce(): string
-  // {
-  //   if(this.bottle.Strength >=5){
-  //     return "../../../../assets/images/fort.jfif";
-  //   }else{
-  //     return "../../../../assets/images/gros.jfif"
-  //   }
+  // bigImageModal(): void{
+  //   this.showBigImage = true;
   // }
 
 }
