@@ -1,0 +1,98 @@
+<div class="cave-div">
+    <div>
+        <div class="card">
+            <div class="card border-danger" style="width: auto;">
+                <div class="card-header">Gestion de toutes les caves</div>
+                <div class="container">
+                    <div class="row card-body text-danger">
+                        <div style="display: inline-flex; text-align: center;margin: auto;">
+                            <!-- Button trigger modal -->
+                            <button type="button" class="btn btn-outline-primary"
+                                style="margin-left:auto;margin-right: 10px;" data-toggle="modal"
+                                data-target="#staticBackdrop">
+                                Ajouter
+                            </button>
+                            <button class="btn btn-outline-warning" style="margin-right:auto; margin-left: 10px;"
+                                data-toggle="modal" data-target="#updateCave">
+                                Modification
+                            </button>
+                        </div>
+                        <!-- Modal Ajout-->
+                        <div class="modal fade" id="staticBackdrop" data-backdrop="static" data-keyboard="false"
+                            tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="staticBackdropLabel">Ajouter une cave</h5>
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                            <span aria-hidden="true">&times;</span>
+                                        </button>
+                                    </div>
+                                    <div class="modal-body">
+
+                                        <div class="form-group">
+                                            <label for="message-text" class="col-form-label">Location :</label>
+                                            <input type="text" class="form-control" id="message-text" [(ngModel)]="cave.Location" />
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="message-text" class="col-form-label">Degrés :</label>
+                                            <input type="number" class="form-control" id="message-text" [(ngModel)]="cave.Degree" />
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="message-text" class="col-form-label">Photo de la cave (url):</label>
+                                            <input type="text" class="form-control" id="message-text" [(ngModel)]="cave.ImageUrl" />
+                                        </div>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary"
+                                            data-dismiss="modal">Fermer</button>
+                                        <button type="button" class="btn btn-primary" (click)="postCave()">Créer</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Modal Update-->
+                        <div class="modal fade" id="updateCave" data-backdrop="static" data-keyboard="false"
+                            tabindex="-1" aria-labelledby="updateCaveLabel" aria-hidden="true">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="updateCaveLabel">Modifier une cave</h5>
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                            <span aria-hidden="true">&times;</span>
+                                        </button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <div class="form-group">
+                                            <label for="recipient-name" class="col-form-label">ID :</label>
+                                            <input type="number" class="form-control" id="recipient-name" [(ngModel)]="caveId" />
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="message-text" class="col-form-label">Location :</label>
+                                            <input type="text" class="form-control" id="message-text" [(ngModel)]="cave.Location" />
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="message-text" class="col-form-label">Degree :</label>
+                                            <input type="number" class="form-control" id="message-text" [(ngModel)]="cave.Degree" />
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="message-text" class="col-form-label">Photo de la cave (url):</label>
+                                            <input type="text" class="form-control" id="message-text" [(ngModel)]="cave.ImageUrl" />
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Fermer</button>
+                                            <button type="button" class="btn btn-primary" (click)="updateCave()">Modifier</button>
+                                        </div>
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div *ngFor="let cave of caves" class="col-4">
+                            <app-card-cave (refreshListAfterDelete)="onGetCaves()" [cave]="cave"></app-card-cave>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>

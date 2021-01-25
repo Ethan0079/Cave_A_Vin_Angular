@@ -10,6 +10,8 @@ import { HomePageComponent } from './Components/home-page/home-page.component';
 import { BottleComponent } from './Components/bottle/bottle.component';
 import { CardBottleComponent } from './Components/card-bottle/card-bottle.component';
 import { AboutComponent } from './Components/about/about.component';
+import { CardCaveComponent } from './Components/card-cave/card-cave.component';
+import { CaveComponent } from './Components/cave/cave.component';
 
 
 
@@ -21,7 +23,9 @@ import { AboutComponent } from './Components/about/about.component';
     HomePageComponent,
     BottleComponent,
     CardBottleComponent,
-    AboutComponent
+    AboutComponent,
+    CardCaveComponent,
+    CaveComponent
   ],
   imports: [
     BrowserModule,

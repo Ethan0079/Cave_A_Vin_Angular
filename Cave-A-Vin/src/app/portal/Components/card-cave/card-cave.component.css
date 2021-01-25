@@ -1,0 +1,12 @@
+#card-cave{
+    padding: 20px;
+    text-align: center;
+}
+.button-space{
+    padding: 5px;
+}
+.cave-img{
+    /* width: 30%; */
+    height: 250px;
+    margin: auto;
+}
