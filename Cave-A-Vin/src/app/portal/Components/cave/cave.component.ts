@@ -59,4 +59,18 @@ export class CaveComponent implements OnInit {
 
   }
 
+  onIdChange(Id: any): void{
+    
+    this._caveService.getCave(parseInt(Id.target.value)).subscribe(
+    data => {
+      if (data) {
+        //this.onGetCaves();
+        this.cave = data;
+      }
+    },
+    //error => { debugger }
+  );
+  //this.cave = {} as Cave;
+  }
+
 }

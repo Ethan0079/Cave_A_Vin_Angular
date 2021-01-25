@@ -58,4 +58,18 @@ export class BottleComponent implements OnInit {
     this.bottle = {} as Bottle;
 
   }
+
+  onIdChange(Id: any): void{
+    
+    this._bottleService.getBottle(parseInt(Id.target.value)).subscribe(
+    data => {
+      if (data) {
+        //this.onGetCaves();
+        this.bottle = data;
+      }
+    },
+    //error => { debugger }
+  );
+  //this.cave = {} as Cave;
+  }
 }

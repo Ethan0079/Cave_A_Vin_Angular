@@ -18,9 +18,9 @@ export class BottleService {
     return this.http.get<Array<Bottle>>(this.urlAllBottle);
   }
 
-  getBottle(id: number): Observable<Array<Bottle>>{
-
-    return this.http.get<Array<Bottle>>(this.urlAllBottle+"/"+ id);
+  getBottle(id: number): Observable<Bottle>{
+    return this.http.get<Bottle>(this.urlAllBottle+"/"+ id);
+    
   }
 
   deleteBottle(id: number): any {

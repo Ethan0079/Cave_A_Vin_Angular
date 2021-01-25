@@ -18,9 +18,9 @@ export class CaveService {
     return this.http.get<Array<Cave>>(this.urlAllCave);
   }
 
-  getCave(id: number): Observable<Array<Cave>>{
+  getCave(id: number): Observable<Cave>{
+    return this.http.get<Cave>(this.urlAllCave+"/"+ id);
 
-    return this.http.get<Array<Cave>>(this.urlAllCave+"/"+ id);
   }
 
   deleteCave(id: number): any {
