@@ -13,8 +13,12 @@ export interface Bottle {
 }
 
 export enum TypeVin{
-    Rouge = 1,
-    Blanc = 2,
-    Rose = 3,
-    Champagne = 4
+    // Rouge 1,
+    // Blanc = 2,
+    // Rose = 3,
+    // Champagne = 4
+    Rouge,
+    Blanc,
+    Rose,
+    Champagne
 }
