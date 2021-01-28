@@ -9,4 +9,15 @@
     /* width: 30%; */
     height: 250px;
     margin: auto;
+    transition: transform .2s;
+}
+.bottle-img:hover{
+    /* zoom: 2; */
+    z-index: 100;
+    transform: scale(2);
+}
+li:hover{
+    background-color: rgba(0,0,0,.125);
+    cursor: -webkit-grabbing; 
+    cursor: grabbing;
 }

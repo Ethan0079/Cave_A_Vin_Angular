@@ -4,12 +4,17 @@
         <li class="list-group-item">Id : {{bottle.Id}}</li>
         <li class="list-group-item">Date : {{bottle.Date}}</li>
         <li class="list-group-item">Quantité : {{bottle.Amount}}</li>
-        <li class="list-group-item">Prix par bouteille : {{bottle.PricePerBottle}}</li>
+        <li class="list-group-item">Prix par bouteille : {{bottle.PricePerBottle}} CHF</li>
         <li class="list-group-item">Type de vin : {{bottle.Typevin}}</li>
-        <li class="list-group-item">OwnerID : {{bottle.OwnerId}}</li>
-        <li class="list-group-item">CaveID : {{bottle.CaveId}}</li>
-
-        <img data-toggle="modal" data-target="#openImage" class="bottle-img" src="{{bottle.ImageUrl}}">
+        <!-- <li class="list-group-item">OwnerID : {{bottle.OwnerId}}</li>
+        <li class="list-group-item">CaveID : {{bottle.CaveId}}</li> -->
+        <li class="list-group-item">
+            <ul style="padding-bottom: 20px;">Informations de la cave :</ul>
+            <ul> Emplacement : {{bottle.Cave.Location}}</ul>
+            <ul> Température : {{bottle.Cave.Degree}}</ul>
+        </li>
+        <li class="list-group-item">Propriéraire : {{bottle.Owner.Firstname}} {{bottle.Owner.Lastname}}</li>
+        <img *ngIf="bottle.ImageUrl != ''" data-toggle="modal" data-target="#openImage" class="bottle-img" src="{{bottle.ImageUrl}}">
     </ul>
     <div class="button-space">
         <button class="btn btn-outline-danger" (click)="onDeleteBottle()">Supprimer</button>
