@@ -46,7 +46,13 @@
                     </div>
                     <div class="form-group">
                       <label for="message-text" class="col-form-label">Type de vin :</label>
-                      <input type="text" class="form-control"  [(ngModel)]="bottle.Typevin" />
+                      <!-- <input type="text" class="form-control"  [(ngModel)]="bottle.Typevin" /> -->
+                      <select name="typeVin" id="typeVin" class="form-control" [(ngModel)]="bottle.Typevin">
+                        <option value="Rouge">Rouge</option>
+                        <option value="Blanc">Blanc</option>
+                        <option value="Rose">Rose</option>
+                        <option value="Champagne">Champagne</option>
+                      </select>
                     </div>
                     <div class="form-group">
                       <label for="message-text" class="col-form-label">Owner ID :</label>

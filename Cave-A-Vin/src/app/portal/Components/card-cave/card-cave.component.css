@@ -5,8 +5,16 @@
 .button-space{
     padding: 5px;
 }
+
 .cave-img{
     /* width: 30%; */
     height: 250px;
     margin: auto;
+    /*transition: transform .2s;  */
+}
+
+li:hover{
+    background-color: rgba(0,0,0,.125);
+    cursor: -webkit-grabbing; 
+    cursor: grabbing;
 }

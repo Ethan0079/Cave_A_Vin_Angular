@@ -4,6 +4,6 @@ export interface User {
     Lastname: string;
     Email: string;
     Age: number;
-
-    Type: number;
+    Type: string;
+    Password: string;
 }

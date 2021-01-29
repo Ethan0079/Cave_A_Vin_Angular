@@ -32,8 +32,7 @@ export class LoginComponent implements OnInit {
       this.validemessage = "Connection autorisée";
       this.valideclass = "alert alert-success"; 
       this.invisible = "invisible";
-    } else
-    {
+    } else {
       this.errormessage = "Erreur de login";
       this.errorclass = "alert alert-danger"; 
       this.invisible = "invisible";
