@@ -6,7 +6,7 @@
 
 ## Required
 
-> Internet connection 
+> Internet connection (pas de WIFI EPSIC !)
 > The dotnet API - `https://github.com/Ethan0079/Cave_Vin_API`
 
 ## Start the Development server

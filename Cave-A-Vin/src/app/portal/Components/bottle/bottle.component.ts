@@ -1,7 +1,11 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { Bottle } from 'src/app/interface/bottle';
+import { Cave } from 'src/app/interface/cave';
+import { User } from 'src/app/interface/user';
 import { BottleService } from '../../Services/bottle.service';
+import { CaveService } from '../../Services/cave.service';
+import { UserService } from '../../Services/user.service';
 
 @Component({
   selector: 'app-bottle',
@@ -10,20 +14,48 @@ import { BottleService } from '../../Services/bottle.service';
 })
 export class BottleComponent implements OnInit {
 
-  public bottles = Array<Bottle>();
+  public bottles: Array<Bottle> = new Array<Bottle>();
   public bottle: Bottle = {} as Bottle;
   public bottleId: number = 1;
+  public users: Array<User> = new Array<User>();
+  public caves: Array<Cave> = new Array<Cave>();
 
-  constructor(private http: HttpClient, public _bottleService: BottleService) {
-    this.bottle = { 
-      Id: 0, Name: "", Date: "2021-01-14T09:37:43.568", Amount: 0, PricePerBottle: 0, CaveId: 0, OwnerId: 0, Typevin: "", ImageUrl:"", 
-      Owner:{ Id:0,Firstname:"",Lastname:"",Age:0,Email:"",Type:"",Password:""},
-      Cave:{ Id:0,Degree:0,ImageUrl:"",Location:""}
-    }
+  constructor(private _bottleService: BottleService,private _userService: UserService,private caveService: CaveService) 
+  {
+    // this.bottle = { 
+    //   Id: 0, Name: "", Date: "2021-01-14T09:37:43.568", Amount: 0, PricePerBottle: 0, CaveId: 0, OwnerId: 0, Typevin: "", ImageUrl:"", 
+    //   Owner:{ Id:0,Firstname:"",Lastname:"",Age:0,Email:"",Type:"",Password:""},
+    //   Cave:{ Id:0,Degree:0,ImageUrl:"",Location:""}
+    // }
   }
 
   ngOnInit(): void {
+    this.onGetUsers();
+    this.onGetCaves();
     this.onGetBottles();
+  }
+
+  onGetUsers():void {
+    this._userService.getUsers().subscribe(
+    data => {
+      if (data) {
+        //debugger;
+        this.users = data;
+      }
+    },
+    error => { debugger }
+  );
+  }
+  onGetCaves():void {
+    this.caveService.getCaves().subscribe(
+    data => {
+      if (data) {
+        //debugger;
+        this.caves = data;
+      }
+    },
+    error => { debugger }
+  );
   }
 
   onGetBottles(): void {
