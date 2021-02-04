@@ -7,6 +7,7 @@
 ## Required
 
 > Internet connection 
+> The dotnet API - `https://github.com/Ethan0079/Cave_Vin_API`
 
 ## Start the Development server
 
@@ -18,3 +19,7 @@
 > Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a 
 > production build.
 
+## Connection
+
+> User > `user`
+> Password > `epsic`
