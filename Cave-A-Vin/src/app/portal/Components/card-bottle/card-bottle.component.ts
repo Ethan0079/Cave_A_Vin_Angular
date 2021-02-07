@@ -12,7 +12,7 @@ export class CardBottleComponent implements OnInit {
   sanitizer: any;
   showBigImage: boolean = false;
 
-  constructor(private http: HttpClient, public _bottleService:BottleService) { }
+  constructor(private http: HttpClient, private _bottleService:BottleService) { }
 
   ngOnInit(): void {
   }

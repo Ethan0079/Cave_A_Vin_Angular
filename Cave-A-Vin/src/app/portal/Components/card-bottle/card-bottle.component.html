@@ -14,7 +14,7 @@
             <ul> Température : {{bottle.Cave.Degree}}</ul>
         </li>
         <li class="list-group-item">Propriéraire : {{bottle.Owner.Firstname}} {{bottle.Owner.Lastname}}</li>
-        <img *ngIf="bottle.ImageUrl != ''" data-toggle="modal" data-target="#openImage" class="bottle-img" src="{{bottle.ImageUrl}}">
+        <img *ngIf="bottle.ImageUrl != null" data-toggle="modal" data-target="#openImage" class="bottle-img" src="{{bottle.ImageUrl}}">
     </ul>
     <div class="button-space">
         <button class="btn btn-outline-danger" (click)="onDeleteBottle()">Supprimer</button>

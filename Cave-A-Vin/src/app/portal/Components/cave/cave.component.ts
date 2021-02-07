@@ -14,7 +14,7 @@ export class CaveComponent implements OnInit {
   public cave: Cave = {} as Cave;
   public caveId: number = 1;
 
-  constructor(private http: HttpClient, public _caveService: CaveService) {
+  constructor(private http: HttpClient, private _caveService: CaveService) {
     //this.cave = { Id: 0, Location: "", Degree: 0, ImageUrl:""}
   }
 
@@ -56,7 +56,6 @@ export class CaveComponent implements OnInit {
       error => { debugger }
     );
     this.cave = {} as Cave;
-
   }
 
   onIdChange(Id: any): void{
@@ -70,7 +69,6 @@ export class CaveComponent implements OnInit {
     },
     //error => { debugger }
   );
-  //this.cave = {} as Cave;
+  this.cave = {} as Cave;
   }
-
 }
