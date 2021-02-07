@@ -10,12 +10,12 @@ import { CaveService } from '../../Services/cave.service';
 })
 export class CaveComponent implements OnInit {
 
-  public caves = Array<Cave>();
+  public caves: Array<Cave> = {} as Array<Cave>;
   public cave: Cave = {} as Cave;
   public caveId: number = 1;
 
   constructor(private http: HttpClient, public _caveService: CaveService) {
-    this.cave = { Id: 0, Location: "", Degree: 0, ImageUrl:""}
+    //this.cave = { Id: 0, Location: "", Degree: 0, ImageUrl:""}
   }
 
   ngOnInit(): void {
